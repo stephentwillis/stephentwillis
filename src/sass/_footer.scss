@@ -1,0 +1,14 @@
+footer {
+    background-color: $gray;
+    color: $gray-light;
+    font-family: $font-primary;
+
+    a {
+        text-decoration: none;
+        color: $gray-light;
+    }
+
+    a:hover {
+        color: $white;
+    }
+}

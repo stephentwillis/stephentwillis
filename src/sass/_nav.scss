@@ -1,0 +1,24 @@
+.navbar {
+    background-color: $olive-light;
+    font-family: $font-primary;
+    
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: $gray-light;
+    }
+
+    ul {
+        li {
+            font-size: $font-big;
+        }
+    }
+
+    .navbar-brand {
+        img {
+            width: 165px;
+        }
+    }
+}
