@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImagePlaceholderComponent } from './image-placeholder/image-placeholder.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     AboutComponent,
     RolesComponent,
-    ContactComponent
+    ContactComponent,
+    ImagePlaceholderComponent
   ],
   imports: [
     BrowserModule,
