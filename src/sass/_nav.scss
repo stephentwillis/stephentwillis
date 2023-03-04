@@ -11,8 +11,15 @@
     }
 
     ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 100%;
+
         li {
             font-size: $font-big;
+            display: block;
+            flex: 0 1 auto;
         }
     }
 
