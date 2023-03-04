@@ -10,6 +10,9 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJZ1JTZTN5"></script>
   </head>
 
   <body class="sw__container container-fluid">
@@ -18,6 +21,12 @@
       <script>
           if (location.hostname == 'localhost') {
             document.title = 'Dev Server :: ' + location.port;
+          } else {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-FJZ1JTZTN5');
           }
       </script>
   </body>
