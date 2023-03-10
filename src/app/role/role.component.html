@@ -1,0 +1,15 @@
+<div class="sw-role__role-card mb-5">
+    <section class="row mb-3 sw-role__role-header">
+        <article class="col-1">
+            <sw-image-placeholder [height]="150" [width]="150"></sw-image-placeholder>
+        </article>
+
+        <article class="col-11">
+            {{company}} - {{jobTitle}}
+            <br />
+            {{from}} - {{to}}
+        </article>
+    </section>
+
+    <section class="row sw-role__role-body" [innerHTML]="responsibilities"></section>
+</div>

@@ -13,3 +13,12 @@
 .sw__img-placeholder--width {
     max-width: 100%;
 }
+
+.sw__utility--copy-block {
+    background-color: #eee;
+    padding: 2rem !important;
+
+    p {
+        padding-right: 0 !important;
+    }
+}

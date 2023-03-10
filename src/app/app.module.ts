@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImagePlaceholderComponent } from './image-placeholder/image-placeholder.component';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImagePlaceholderComponent } from './image-placeholder/image-placeholder
     AboutComponent,
     RolesComponent,
     ContactComponent,
-    ImagePlaceholderComponent
+    ImagePlaceholderComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,
