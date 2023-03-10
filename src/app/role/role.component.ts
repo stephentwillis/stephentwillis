@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
-import config from './config';
+import career from '../model/career';
 
 @Component({
   selector: 'sw-role',
@@ -11,26 +11,19 @@ import config from './config';
 export class RoleComponent {
   constructor(private sanitizer: DomSanitizer) {}
 
-  private _from: string = "";
-  private _to: string = "";
   private _company: string = "";
   private _jobTitle: string = "";
-  private _responsibilities: string = "";
-
-  @Input() set from(value: string) {
-    this._from = value;
-  }
 
   get from(): string {
-    return this._from;
-  }
-
-  @Input() set to(value: string) {
-    this._to = value;
+    return career.companies.filter((c) => c.name === this._company)[0].roles.filter((r) => r.jobTitle === this._jobTitle)[0].from;
   }
 
   get to(): string {
-    return this._to;
+    return career.companies.filter((c) => c.name === this._company)[0].roles.filter((r) => r.jobTitle === this._jobTitle)[0].to;
+  }
+
+  get logo(): string {
+    return career.companies.filter((c) => c.name === this._company)[0].logo;
   }
 
   @Input() set company(value: string) {
@@ -49,7 +42,7 @@ export class RoleComponent {
     return this._jobTitle;
   }
   
-  get responsibilities(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(config.roles.filter((x) => x.name === this._jobTitle)[0].value);
+  get description(): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(career.companies.filter((c) => c.name === this._company)[0].roles.filter((r) => r.jobTitle === this._jobTitle)[0].description);
   }
 }

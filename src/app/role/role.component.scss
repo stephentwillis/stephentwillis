@@ -5,5 +5,9 @@
     .sw-role__role-header {
         font-weight: bold;
         font-style: italic;
+
+        .sw-role__company-logo {
+            max-width: 150px;
+        }
     }
 }
