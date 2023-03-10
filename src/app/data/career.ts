@@ -1,4 +1,4 @@
-import { ICareer, ICompany, IRole } from './ICareer';
+import { ICareer, ICompany, IRole } from '../model/ICareer';
 
 const Career: ICareer = {
     companies: [
