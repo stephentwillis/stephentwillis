@@ -45,4 +45,8 @@ export class RoleComponent {
   get description(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(career.companies.filter((c) => c.name === this._company)[0].roles.filter((r) => r.jobTitle === this._jobTitle)[0].description);
   }
+
+  get url(): string {
+    return career.companies.filter((c) => c.name === this._company)[0].url;
+  }
 }

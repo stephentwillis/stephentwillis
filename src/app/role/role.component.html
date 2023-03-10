@@ -1,13 +1,17 @@
 <div class="sw-role__role-card mb-5">
     <section class="row mb-3 sw-role__role-header">
-        <article class="col-1">
+        <article class="col-6 col-md-2">
             <img [src]="logo" alt="company logo" class="sw-role__company-logo" />
         </article>
 
-        <article class="col-11">
-            {{company}} - {{jobTitle}}
+        <article class="col-12 col-md-10">
+            {{company}}
+            <br />
+            {{jobTitle}}
             <br />
             {{from}} - {{to}}
+            <br />
+            <a href={{url}} target="_blank">{{url.replace('https://', '')}}</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </article>
     </section>
 

@@ -6,6 +6,7 @@ export interface ICompany {
     logo: string;
     name: string;
     roles: Array<IRole>;
+    url: string;
 }
 
 export interface IRole {

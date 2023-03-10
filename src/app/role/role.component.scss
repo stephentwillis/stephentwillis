@@ -1,13 +1,27 @@
+@import '../../sass/variables';
+
 .sw-role__role-card {
     background-color: #eee;
     padding: 2rem;
+    border-left: 5px solid $olive-light;
 
     .sw-role__role-header {
         font-weight: bold;
         font-style: italic;
 
         .sw-role__company-logo {
-            max-width: 150px;
+            width: 100%;
+        }
+
+        a {
+            color: $olive-dark;
+            text-decoration: none;
+        }
+
+        svg {
+            margin-left: 5px;
+            color: $olive-dark;
+            font-size: 0.9rem;
         }
     }
 }

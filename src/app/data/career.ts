@@ -24,7 +24,8 @@ const Career: ICareer = {
                     jobTitle: "CMS / Web Developer",
                     to: "Oct 2012"
                 }
-            ]
+            ],
+            url: "https://www.rsc.org.uk"
         },
         {
             logo: "",
@@ -36,7 +37,8 @@ const Career: ICareer = {
                     jobTitle: "Multimedia Consultant",
                     to: "Apr 2019"
                 }
-            ]
+            ],
+            url: ""
         },
         {
             logo: "https://media.licdn.com/dms/image/D4E0BAQF7beDo0dwKqg/company-logo_100_100/0/1663664301272?e=1686787200&v=beta&t=iGUKekhNXaxXAi-xdyJZ6Ntt3c6Nx3rRcJRKmfgIVXY",
@@ -48,7 +50,8 @@ const Career: ICareer = {
                     jobTitle: "Multimedia Coordinator",
                     to: "Sep 2011"
                 }
-            ]
+            ],
+            url: "https://www.derbyshire.gov.uk"
         }   
     ]
 }
