@@ -5,6 +5,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: $olive-light;
+}
+
 svg {
     margin-left: 5px;
     color: $olive-dark;
