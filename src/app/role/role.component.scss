@@ -12,12 +12,15 @@
         .sw-role__company-logo {
             width: 100%;
         }
+    }
 
+    .sw-role__role-header,
+    .sw-role__role-body {
         a {
             color: $olive-dark;
             text-decoration: none;
         }
-
+        
         svg {
             margin-left: 5px;
             color: $olive-dark;
