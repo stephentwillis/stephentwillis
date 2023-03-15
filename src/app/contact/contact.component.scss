@@ -1,0 +1,22 @@
+@import '../../sass/variables';
+
+button {
+    background: $olive-dark;
+    color: $white;
+}
+
+button:hover {
+    background: $olive-light;
+}
+
+input[type=text],
+textarea,
+button {
+    border-radius: 0;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    border-color: #828C6D;
+    box-shadow: 0 0 0 0.25rem rgba(130, 140, 109, .25)
+}

@@ -26,10 +26,9 @@
     .toggler-icon {
         display: block;
         position:absolute;
-        height: 3px;
+        height: 2px;
         width: 100%;
         background: $white;
-        border-radius: 1px;
         opacity: 1;
         left:0;
         transform: rotate(0deg);
@@ -39,7 +38,7 @@
     .middle-bar {
         margin-top: 0px;
         width: 75%;
-        margin-left: 4px !important;
+        margin-left: 25% !important;
     }
 
     .navbar-toggler .top-bar {
@@ -53,12 +52,13 @@
     }
 
     .navbar-toggler .bottom-bar {
+        width: 100%;
         margin-top: 0px;
         transform: rotate(-135deg);
     }
 
     .navbar-toggler.collapsed .top-bar {
-        margin-top: -20px;
+        margin-top: -18px;
         transform: rotate(0deg);
     }
 
@@ -68,8 +68,10 @@
     }
 
     .navbar-toggler.collapsed .bottom-bar {
-        margin-top: 20px;
+        margin-top: 18px;
         transform: rotate(0deg);
+        width: 50%;
+        margin-left: 50% !important;
     }
     
     a {
