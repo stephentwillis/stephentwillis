@@ -1,12 +1,44 @@
 @import '../../sass/variables';
 
+.alert {
+    border-radius: 0;
+
+    &.alert-success {
+        background: $olive-light-transparent;
+        border-color: $olive-dark;
+    }
+
+    /*&.alert-danger {
+        background: $red-transparent;
+        border-color: $red;
+    }*/
+}
+
+sup {
+    color: $red;
+    top: -5px !important;
+    left: 5px;
+}
+
 button {
     background: $olive-dark;
     color: $white;
 }
 
-button:hover {
+button:hover,
+button:focus,
+button:active {
     background: $olive-light;
+    color: $white;
+}
+
+button.disabled {
+    cursor: not-allowed;
+    color: $gray-light;    
+}
+
+button.disabled:hover {
+    background: unset;
 }
 
 input[type=text],
@@ -17,6 +49,6 @@ button {
 
 input[type=text]:focus,
 textarea:focus {
-    border-color: #828C6D;
-    box-shadow: 0 0 0 0.25rem rgba(130, 140, 109, .25)
+    border-color: $olive-dark;
+    box-shadow: 0 0 0 0.25rem $olive-light-transparent;
 }

@@ -5,32 +5,44 @@
         <section class="sw__page-content row mb-5">
             <article class="col-12 col-md-6 sw__utility--copy-block">
                 <form #form="ngForm" (ngSubmit)="sendEmail(form.value)">
-                    <div class="row g-3 mb-3">
-                        <div class="col">
-                            <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First name" aria-label="First name" ngModel />
+                    <div *ngIf="message.length > 0" class="row mb-3">
+                        <div class="col alert" [ngClass]="isCaptchaValid && isSent ? 'alert-success' : 'alert-danger'" role="alert">
+                            {{message}}
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col ps-0">
+                            <label for="firstname">First name:</label> <sup>* required</sup>
+                            <input type="text" id="firstname" name="firstname" [ngClass]="firstname.pristine ? 'is-invalid' : 'is-valid'" class="form-control" aria-label="First name" ngModel required #firstname="ngModel"/>
                         </div>
                         
-                        <div class="col">
-                            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel />
+                        <div class="col pe-0">
+                            <label for="lastname">Last name:</label> <sup>* required</sup>
+                            <input type="text" id="lastname" name="lastname" [ngClass]="lastname.pristine ? 'is-invalid' : 'is-valid'" class="form-control" aria-label="Last name" ngModel required #lastname="ngModel" />
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col">
-                            <input type="text" id="email" name="email" class="form-control" placeholder="Email address" aria-label="Email address" ngModel />
+                        <div class="col ps-0 pe-0">
+                            <label for="email">Email address:</label> <sup>* required</sup>
+                            <input type="text" id="email" name="email" [ngClass]="email.pristine ? 'is-invalid' : 'is-valid'" class="form-control" aria-label="Email address" ngModel required email #email="ngModel" />
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col">
-                            <textarea id="message" name="message" class="form-control" placeholder="Your message" aria-label="Your message" rows="10" ngModel></textarea>
+                        <div class="col ps-0 pe-0">
+                            <label for="message">Your message:</label> <sup>* required</sup>
+                            <textarea id="message" name="message"[ngClass]="msg.pristine ? 'is-invalid' : 'is-valid'" class="form-control" aria-label="Your message" rows="10" ngModel required #msg="ngModel"></textarea>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-8 col-md-10"></div>
-                        <div class="col-4 col-md-2">
-                            <button type="submit" id="submit" name="submit" class="form-control" aria-label="Submit">Send</button>
+                        <div class="col-8 col-md-10 ps-0 pe-0">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6LdJQgclAAAAAF5pzEPoSTYzM5qVVdKkwq3rZpBO"></re-captcha>
+                        </div>
+                        <div class="col-4 col-md-2 ps-0 pe-0">
+                            <button type="submit" id="submit" name="submit" class="form-control" aria-label="Submit" [disabled]="form.invalid && !isCaptchaValid" [ngClass]="form.invalid && !isCaptchaValid ? 'disabled': ''">Send</button>
                         </div>
                     </div>
                 </form>
