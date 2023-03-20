@@ -52,3 +52,14 @@ textarea:focus {
     border-color: $olive-dark;
     box-shadow: 0 0 0 0.25rem $olive-light-transparent;
 }
+
+textarea.ng-touched,
+input.ng-touched {
+    &.ng-invalid {
+        border-color: $red;
+    }
+
+    &.ng-valid {
+        border-color: $green;
+    }
+}
