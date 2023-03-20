@@ -16,15 +16,15 @@ export class RoleComponent {
   private _jobTitle: string = "";
 
   get from(): string {
-    return career.companies.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].from;
+    return career.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].from;
   }
 
   get to(): string {
-    return career.companies.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].to;
+    return career.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].to;
   }
 
   get logo(): string {
-    return career.companies.filter((c: ICompany) => c.name === this._company)[0].logo;
+    return career.filter((c: ICompany) => c.name === this._company)[0].logo;
   }
 
   @Input() set company(value: string) {
@@ -44,10 +44,10 @@ export class RoleComponent {
   }
   
   get description(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(career.companies.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].description);
+    return this.sanitizer.bypassSecurityTrustHtml(career.filter((c: ICompany) => c.name === this._company)[0].roles.filter((r: IRole) => r.jobTitle === this._jobTitle)[0].description);
   }
 
   get url(): string {
-    return career.companies.filter((c: ICompany) => c.name === this._company)[0].url;
+    return career.filter((c: ICompany) => c.name === this._company)[0].url;
   }
 }

@@ -1,7 +1,3 @@
-export interface ICareer {
-    companies: Array<ICompany>;
-}
-
 export interface ICompany {
     logo: string;
     name: string;
