@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 import strings from '../../strings';
@@ -11,22 +12,29 @@ import strings from '../../strings';
 export class ContactComponent {
     private captchaResponse: string | null = null;
   
-    public isFormValid: boolean = false;
-    public isCaptchaValid: boolean = this.captchaResponse !== "null" && this.captchaResponse !== null;
+    public isFormValid: boolean = false;    
     public isSent: boolean = false;
     public message: string = "";
 
-    public sendEmail = (form: {}): void => {
-        if (this.isFormValid) {            
+    get isCaptchaValid(): boolean {
+        return this.captchaResponse !== "null" && this.captchaResponse !== null;
+    }
+
+    public sendEmail = (form: NgForm): void => {
+        if (form.valid) {            
             if (this.isCaptchaValid) {
-            /*emailjs.send('donotreply', 'donotreply_basic', form, 'hTFKs5h8Xkg4XwjMu')
-                .then((res: EmailJSResponseStatus): void => {
-                    this.message = strings.ContactSuccess;
-                    this.isSent = true;
-                })
-                .catch((err: EmailJSResponseStatus):void => {
-                    this.message = strings.ContactFailure;
-                });*/
+                if (window.location.hostname !== "localhost") {
+                    emailjs.send('donotreply', 'donotreply_basic', form.value, 'hTFKs5h8Xkg4XwjMu')
+                        .then((res: EmailJSResponseStatus): void => {
+                            this.message = strings.ContactSuccess;
+                            this.isSent = true;
+                        })
+                        .catch((err: EmailJSResponseStatus):void => {
+                            this.message = strings.ContactFailure;
+                        });
+                } else {
+                    console.info('Email Sent!');
+                }
 
                 this.message = strings.ContactSuccess;
                 this.isSent = true;
@@ -39,7 +47,7 @@ export class ContactComponent {
     }
 
     public resolved(captchaResponse: string) {
-        console.info(`Captcha response: ${captchaResponse}`);
+        //console.info(`Captcha response: ${captchaResponse}`);
         this.captchaResponse = captchaResponse;
     }
 }
