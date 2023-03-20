@@ -4,19 +4,10 @@
 
         <aside class="sw__utility--copy-block">
             <p>
-                AMPLIFY Management Development Programme (2023), <a href="https://www.managementcentre.co.uk/" target="blank">=MC<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                ITIL v4 Foundation Certificate (2022), <a href="https://www.axelos.com" target="_blank">Axelos<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                RSC Management Development (2019), <a href="https://www.managementcentre.co.uk/" target="blank">=MC<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                RSC Project Management (2015), <a href="https://www.managementcentre.co.uk/" target="blank">=MC<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                ITIL v2 Foundation Certificate (2014), <a href="https://www.axelos.com" target="_blank">Axelos<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                Introduction to Computer Science and Programming using Python (2014), <a href="https://mitxonline.mit.edu/" target="_blank">MITx<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <br />
-                Batchelor of Arts (Hons) Media Production, 2:1 (2005), <a href="https://www.lincoln.ac.uk/" target="_blank">University of Lincoln<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <span *ngFor="let e of collection">
+                    {{e.title}} ({{e.year}}), <a [href]="e.url" target="_blank">{{e.provider}}<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <br />
+                </span>
             </p>
         </aside>
     </article>
