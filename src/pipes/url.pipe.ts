@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 
 @Pipe({
-    name: 'URL'
+    name: 'url'
 })
 export class UrlPipe implements PipeTransform {
     transform(value: string) {
