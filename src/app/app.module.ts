@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { UrlPipe } from 'src/pipes/url.pipe';
+
 import { RecaptchaModule } from "ng-recaptcha";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +27,8 @@ import { RoleComponent } from './role/role.component';
     RolesComponent,
     ContactComponent,
     ImagePlaceholderComponent,
-    RoleComponent
+    RoleComponent,
+    UrlPipe
   ],
   imports: [
     BrowserModule,

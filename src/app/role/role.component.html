@@ -13,7 +13,7 @@
             <br />
 
             <div *ngIf="url.length > 0">
-                <a href={{url}} target="_blank">{{url.replace('https://', '')}}</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <a href={{url}} target="_blank">{{url | URL}}</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
         </article>
     </section>
