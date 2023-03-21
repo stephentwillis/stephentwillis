@@ -1,4 +1,4 @@
-import { IStrings } from "./model/IStrings";
+import { IStrings } from "./app/model/IStrings";
 
 const strings: IStrings = {
     ContactSuccess: "Thank you, your message has been sent.",

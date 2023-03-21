@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import career from '../../data/career';
-import { ICompany, IRole } from 'src/model/ICareer';
+import { ICompany, IRole } from 'src/app/model/ICareer';
 
 @Component({
   selector: 'sw-role',

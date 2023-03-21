@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
-import strings from '../../strings';
+import strings from '../../../strings';
 
 @Component({
   selector: 'sw-contact',

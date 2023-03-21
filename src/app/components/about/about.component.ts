@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { IEducation } from 'src/model/IEducation';
-import Education from 'src/data/education';
+import { IEducation } from 'src/app/model/IEducation';
+import Education from 'src/app/data/education';
 
 @Component({
   selector: 'sw-about',
