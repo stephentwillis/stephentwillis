@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http'
+import { Observable, throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 import { ICompany } from '../model/ICareer';
+
+import config from 'src/app/config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CareerService {
-    constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-    public getData = (): Array<ICompany> => {
-      fetch("", {})
-          .then((res: Response) => {
+  public getData = (): Observable<Array<ICompany>> => {
+      const url = config.endpoints.filter(x => x.name === 'github')[0].url;
+      const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
-          })
-          .catch((err: Error) => {
+      const headers: HttpHeaders = new HttpHeaders();
+      headers.append('Accept', 'application/vnd.github.VERSION.raw');
 
-          });
-      
-        // Needs implementing
-        return new Array<ICompany>;
-    }
+      return this.httpClient.get<Array<ICompany>>(url.replace('{REPO}', 'data').replace('{URL}', 'personal/career.json?ref=main'), { headers: headers });
+  }
 }
