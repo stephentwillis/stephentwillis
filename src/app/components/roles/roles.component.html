@@ -1,11 +1,11 @@
 <section class="sw__page-content row mb-5">
     <article class="col-12">
         <h2 class="text-uppercase sw__page-text sw__page-text--thin mb-5">Career Summary</h2>
-
-        <sw-role [company]="'Royal Shakespeare Company'" [jobTitle]="'Head of Application Delivery'"></sw-role>
-        <sw-role [company]="'Royal Shakespeare Company'" [jobTitle]="'Lead Software Developer'"></sw-role>
-        <sw-role [company]="'Royal Shakespeare Company'" [jobTitle]="'CMS / Web Developer'"></sw-role>
-        <sw-role [company]="'Freelance'" [jobTitle]="'Multimedia Consultant'"></sw-role>
-        <sw-role [company]="'Derbyshire County Council'" [jobTitle]="'Multimedia Coordinator'"></sw-role>
+        
+        <span *ngFor="let c of career">
+            <span *ngFor="let r of c.roles">
+                <sw-role [company]="c.name" [jobTitle]="r.jobTitle"></sw-role>
+            </span>
+        </span>
     </article>
 </section>

@@ -18,6 +18,8 @@ export class AboutComponent {
 
     private getData = (service: EducationService): void => {
         service.getData()
-            .subscribe((data: Array<IEducation>) => this.collection = [ ...data ]);
+            .subscribe((data: any) => {
+                this.collection = JSON.parse(atob(data.content));
+            });
     }
 }

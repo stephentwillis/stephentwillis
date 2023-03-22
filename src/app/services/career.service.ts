@@ -12,18 +12,17 @@ import config from 'src/app/config';
 export class CareerService {
   constructor(private httpClient: HttpClient) { }
 
-  public getData = (): Observable<Array<ICompany>> => {
+  public getData = (): Observable<any> => {
       const url = config.endpoints.filter(x => x.name === 'github')[0].url;
       const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
-      const headers: HttpHeaders = new HttpHeaders();
-      headers.append('Accept', 'application/vnd.github.VERSION.raw');
-
       return this.httpClient
-          .get<Array<ICompany>>(
+          .get<any>(
               url.replace('{REPO}', 'data').replace('{URL}', 'personal/career.json?ref=main'),
               { 
-                  headers: headers,
+                  headers: {
+                      'Accept': 'application/vnd.github.VERSION.raw'
+                  },
                   observe: 'body',
                   responseType: 'json'
               }
