@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EducationService } from 'src/app/services/education.service';
 
 import { IEducation } from 'src/app/model/IEducation';
 import Education from 'src/app/data/education';
@@ -9,5 +10,9 @@ import Education from 'src/app/data/education';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-    public collection: Array<IEducation> = Education;
+    public collection: Array<IEducation>;
+
+    constructor(service: EducationService) {
+        this.collection = service.getData();
+    }
 }
