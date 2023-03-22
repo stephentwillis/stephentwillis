@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http'
+import { Observable, throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 import { IEducation } from '../model/IEducation';
 
 import config from 'src/app/config';
@@ -10,13 +12,13 @@ import config from 'src/app/config';
 export class EducationService {
     constructor(private httpClient: HttpClient) { }
 
-    public getData = (): Array<IEducation> => {
+    public getData = (): Observable<Array<IEducation>> => {
         const url = config.endpoints.filter(x => x.name === 'github')[0].url;
-        const secret = config.endpoints.filter(x => x.name === 'github')[0].secret;
+        const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
-        this.httpClient.get<Array<IEducation>>(url, {}).subscribe();
+        const headers: HttpHeaders = new HttpHeaders();
+        headers.append('Accept', 'application/vnd.github.VERSION.raw');
 
-        // Needs implementing
-        return new Array<IEducation>;
+        return this.httpClient.get<Array<IEducation>>(url.replace('{REPO}', 'data').replace('{URL}', 'personal/education.json?ref=main'), { headers: headers });
     }
 }
