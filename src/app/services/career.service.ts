@@ -19,6 +19,14 @@ export class CareerService {
       const headers: HttpHeaders = new HttpHeaders();
       headers.append('Accept', 'application/vnd.github.VERSION.raw');
 
-      return this.httpClient.get<Array<ICompany>>(url.replace('{REPO}', 'data').replace('{URL}', 'personal/career.json?ref=main'), { headers: headers });
+      return this.httpClient
+          .get<Array<ICompany>>(
+              url.replace('{REPO}', 'data').replace('{URL}', 'personal/career.json?ref=main'),
+              { 
+                  headers: headers,
+                  observe: 'body',
+                  responseType: 'json'
+              }
+          );
   }
 }

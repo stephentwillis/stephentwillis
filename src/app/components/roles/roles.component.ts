@@ -8,9 +8,14 @@ import { CareerService } from 'src/app/services/career.service';
   styleUrls: ['./roles.component.scss']
 })
 export class RolesComponent {
-    public career: Array<ICompany>;
+    public career: Array<ICompany> = [];
 
     constructor(service: CareerService) {
-        this.career = service.getData();
+        this.getData(service);
+    }
+
+    private getData = (service: CareerService): void => {
+        service.getData()
+            .subscribe((data: Array<ICompany>) => this.career = [ ...data ]);
     }
 }

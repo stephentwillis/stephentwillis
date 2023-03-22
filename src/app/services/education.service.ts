@@ -19,6 +19,14 @@ export class EducationService {
         const headers: HttpHeaders = new HttpHeaders();
         headers.append('Accept', 'application/vnd.github.VERSION.raw');
 
-        return this.httpClient.get<Array<IEducation>>(url.replace('{REPO}', 'data').replace('{URL}', 'personal/education.json?ref=main'), { headers: headers });
+        return this.httpClient
+          .get<Array<IEducation>>(
+              url.replace('{REPO}', 'data').replace('{URL}', 'personal/education.json?ref=main'),
+              { 
+                  headers: headers,
+                  observe: 'body',
+                  responseType: 'json'
+              }
+          );
     }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { UrlPipe } from 'src/app/pipes/url.pipe';
 
@@ -34,7 +35,8 @@ import { RoleComponent } from './components/role/role.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RecaptchaModule
+    RecaptchaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

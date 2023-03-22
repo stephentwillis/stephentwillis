@@ -10,9 +10,14 @@ import Education from 'src/app/data/education';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-    public collection: Array<IEducation>;
+    public collection: Array<IEducation> = [];
 
     constructor(service: EducationService) {
-        this.collection = service.getData();
+        this.getData(service);
+    }
+
+    private getData = (service: EducationService): void => {
+        service.getData()
+            .subscribe((data: Array<IEducation>) => this.collection = [ ...data ]);
     }
 }
