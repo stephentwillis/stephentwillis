@@ -16,16 +16,15 @@ export class EducationService {
         const url = config.endpoints.filter(x => x.name === 'github')[0].url;
         const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
-        const headers: HttpHeaders = new HttpHeaders();
-        headers.append('Accept', 'application/vnd.github.VERSION.raw');
-
         return this.httpClient
-          .get<any>(
+          .get<Array<IEducation>>(
               url.replace('{REPO}', 'data').replace('{URL}', 'personal/education.json?ref=main'),
               { 
-                  headers: headers,
-                  observe: 'body',
-                  responseType: 'json'
+                    headers: {
+                        'Accept': 'application/vnd.github.VERSION.raw'
+                    },
+                    observe: 'body',
+                    responseType: 'json'
               }
           );
     }

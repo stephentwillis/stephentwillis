@@ -17,7 +17,7 @@ export class CareerService {
       const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
       return this.httpClient
-          .get<any>(
+          .get<Array<ICompany>>(
               url.replace('{REPO}', 'data').replace('{URL}', 'personal/career.json?ref=main'),
               { 
                   headers: {

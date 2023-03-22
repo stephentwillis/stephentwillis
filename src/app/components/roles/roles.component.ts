@@ -16,8 +16,6 @@ export class RolesComponent {
 
     private getData = (service: CareerService): void => {
         service.getData()
-            .subscribe((data: any) => {
-                this.career = JSON.parse(atob(data.content));
-            });
+            .subscribe((data: Array<ICompany>) => this.career = [ ...data ]);
     }
 }
