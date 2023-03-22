@@ -19,7 +19,5 @@ export class RolesComponent {
             .subscribe((data: any) => {
                 this.career = JSON.parse(atob(data.content));
             });
-
-        console.info(this.career);
     }
 }
