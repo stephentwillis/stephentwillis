@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { EducationService } from 'src/app/services/education.service';
 
 import { IEducation } from 'src/app/model/IEducation';
-import Education from 'src/app/data/education';
 
 @Component({
   selector: 'sw-about',
