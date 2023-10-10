@@ -11,12 +11,12 @@ import { IEducation } from 'src/app/model/IEducation';
 export class AboutComponent {
     public collection: Array<IEducation> = [];
 
-    constructor(service: EducationService) {
-        this.getData(service);
+    constructor(private service: EducationService) {
+        this.getData();
     }
 
-    private getData = (service: EducationService): void => {
-        service.getData()
+    private getData = (): void => {
+        this.service.getData()
             .subscribe((data: Array<IEducation>) => this.collection = [ ...data ]);
     }
 }

@@ -10,12 +10,12 @@ import { CareerService } from 'src/app/services/career.service';
 export class RolesComponent {
     public career: Array<ICompany> = [];
 
-    constructor(service: CareerService) {
-        this.getData(service);
+    constructor(private service: CareerService) {
+        this.getData();
     }
 
-    private getData = (service: CareerService): void => {
-        service.getData()
+    private getData = (): void => {
+        this.service.getData()
             .subscribe((data: Array<ICompany>) => this.career = [ ...data ]);
     }
 }

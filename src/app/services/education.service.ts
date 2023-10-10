@@ -12,14 +12,14 @@ import config from 'src/app/config';
 export class EducationService {
     constructor(private httpClient: HttpClient) { }
 
-    public getData = (): Observable<any> => {
+    public getData = (): Observable<Array<IEducation>> => {
         const url = config.endpoints.filter(x => x.name === 'github')[0].url;
         const secret = `ghp_${config.endpoints.filter(x => x.name === 'github')[0].secret}`;
 
         return this.httpClient
           .get<Array<IEducation>>(
               url.replace('{REPO}', 'data').replace('{URL}', 'personal/education.json?ref=main'),
-              { 
+              {
                     headers: {
                         'Accept': 'application/vnd.github.VERSION.raw'
                     },
