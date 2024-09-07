@@ -6,9 +6,9 @@ const Career: Array<ICompany> = [
       "name": "Tessitura Network",
       "roles": [
           {
-              "description": " ",
+              "description": "<article class=\"col\"><i>Technical Responsibilites</i><ul><li>Technical delivery of Tessitura Express Web (TNEW) extensions and customisations meeting TN strategic and member organisation requirements.</li><li>Engineered a membership integration for the Royal Academy of Arts enabling bespoke customer data capture and post-purchase processing.</li><li>Performance optimization of v16 Ticket Limits extension as part of inter-group working party investigating TNEW latency for Royal Academy of Arts and National Theatre, working closely with Senior leaders, product owners, and Innovation Group colleagues.</li><li>Engineered Add-on performance customisation for Artis-Naples to upsell select performances to subscribers.</li><li>Member of the team that engineered v16 Direct Debit extension focusing on the post-purchase data processing and customer mandate acknowledgements.</li><li>Member of the team that engineered v16 Education extension, focusing on issue and defect resolution.</li><li>Engineered a proof-of-concept v16 extension integrating Angular with .NET MVC and the Customization Framework.</li><li>Ensuring all solutions are developed with appropriate unit test coverage and documentation.</li><li>Working closely with member organisations and internal stakeholders across the project lifecycle from initiation to delivery ensuring excellent communication and client satisfaction throughout.</li></ul></article><article class=\"col\"><i>Process Improvements</i><ul><li>•	Authored recommended engineering standards for the Technical Solutions team (on-going).</li><li>•	In collaboration with Innovation Group colleagues, created Bamboo/Slack integration to improve visibility of AWS Lambda deployment notifications.</li></ul></article>",
               "from": "Jul 2023",
-              "jobTitle": "Web Developer, API Consulting & Web Solutions - Professional Services",
+              "jobTitle": "Web Developer, API Consulting & Web Solutions - Technical Solutions",
               "to": "Present"
           }
       ],
