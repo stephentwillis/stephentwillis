@@ -2,7 +2,7 @@ import { ICompany, IRole } from '../model/ICareer';
 
 const Career: Array<ICompany> = [
   {
-      "logo": "https://www.tessituranetwork.com/content/img/homepage/tessitura-white.svg",
+      "logo": "https://www.tessitura.com/_next/static/media/logo.14ba9859.svg",
       "name": "Tessitura Network",
       "roles": [
           {
