@@ -3,7 +3,7 @@
 .sw-role__role-card {
     background-color: #eee;
     padding: 2rem;
-    border-left: 5px solid $olive-light;
+    /*border-left: 5px solid $olive-light;*/
 
     .sw-role__role-header {
         font-weight: bold;
@@ -28,7 +28,7 @@
         a:hover {
             color: $olive-light;
         }
-        
+
         svg {
             margin-left: 5px;
             color: $olive-dark;

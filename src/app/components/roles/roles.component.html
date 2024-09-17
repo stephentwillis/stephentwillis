@@ -2,10 +2,12 @@
     <article class="col-12">
         <h2 class="text-uppercase sw__page-text sw__page-text--thin mb-5">Career Summary</h2>
 
-        <span *ngFor="let c of career">
-            <span *ngFor="let r of c.roles">
-                <sw-role [career]="career" [company]="c.name" [jobTitle]="r.jobTitle"></sw-role>
+        <section class="main-timeline">
+            <span *ngFor="let c of career">
+                <span class="ms-3 timeline" *ngFor="let r of c.roles">
+                    <sw-role [career]="career" [company]="c.name" [jobTitle]="r.jobTitle"></sw-role>
+                </span>
             </span>
-        </span>
+        </section>
     </article>
 </section>

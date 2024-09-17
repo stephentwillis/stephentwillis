@@ -1,0 +1,37 @@
+/* The actual timeline (the vertical ruler) */
+.main-timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  background-color: $olive-light;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: -25px;
+  background-color: $olive-light;
+  top: 18px;
+  border-radius: 50%;
+  z-index: 1;
+}
