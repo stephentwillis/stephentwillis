@@ -1,6 +1,6 @@
 export interface IEducation {
-    provider: string;
-    title: string;    
-    url: string;
-    year: string;
+    Provider: string;
+    Title: string;
+    Url: string;
+    Year: string;
 }

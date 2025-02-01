@@ -7,10 +7,10 @@
         <article class="sw-role__details-header col-9 col-md-11">
             {{company}}
             <br />
-            {{jobTitle}}
-            <br />
-            {{from}} - {{to}}
-            <br />
+            <span>
+              {{from}} - {{to}} &Tab; {{jobTitle}}
+              <br />
+            </span>
 
             <div *ngIf="url.length > 0">
                 <a href={{url}} target="_blank">{{url | url}}</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>

@@ -4,8 +4,8 @@
 
         <section class="main-timeline">
             <span *ngFor="let c of career">
-                <span class="ms-3 timeline" *ngFor="let r of c.roles">
-                    <sw-role [career]="career" [company]="c.name" [jobTitle]="r.jobTitle"></sw-role>
+                <span class="ms-3 timeline" *ngFor="let r of c.Roles">
+                    <sw-role [career]="career" [company]="c.Name" [jobTitle]="r.JobTitle"></sw-role>
                 </span>
             </span>
         </section>

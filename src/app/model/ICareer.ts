@@ -1,13 +1,16 @@
 export interface ICompany {
-    logo: string;
-    name: string;
-    roles: Array<IRole>;
-    url: string;
+    CombineRoles: boolean;
+    Description: string;
+    Logo: string;
+    Name: string;
+    Overview: string;
+    Roles: Array<IRole>;
+    Url: string;
 }
 
 export interface IRole {
-    description: string;
-    from: string;
-    jobTitle: string;    
-    to: string;
+    Description: string;
+    From: string;
+    JobTitle: string;
+    To: string;
 }

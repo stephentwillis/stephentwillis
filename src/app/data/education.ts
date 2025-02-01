@@ -2,46 +2,46 @@ import { IEducation } from '../model/IEducation';
 
 const Education: Array<IEducation> = [
     {
-        provider: "=MC",
-        title: "AMPLIFY Management Development Programme",        
-        url: "https://www.managementcentre.co.uk/",
-        year: "2023"
+        Provider: "=MC",
+        Title: "AMPLIFY Management Development Programme",
+        Url: "https://www.managementcentre.co.uk/",
+        Year: "2023"
     },
     {
-        provider: "Axelos",
-        title: "ITIL v4 Foundation Certificate",        
-        url: "https://www.axelos.com/",
-        year: "2022"
+        Provider: "Axelos",
+        Title: "ITIL v4 Foundation Certificate",
+        Url: "https://www.axelos.com/",
+        Year: "2022"
     },
     {
-        provider: "=MC",
-        title: "RSC Management Development",        
-        url: "https://www.managementcentre.co.uk/",
-        year: "2019"
+        Provider: "=MC",
+        Title: "RSC Management Development",
+        Url: "https://www.managementcentre.co.uk/",
+        Year: "2019"
     },
     {
-        provider: "=MC",
-        title: "RSC Project Management",
-        url: "https://www.managementcentre.co.uk/",
-        year: "2015"
+        Provider: "=MC",
+        Title: "RSC Project Management",
+        Url: "https://www.managementcentre.co.uk/",
+        Year: "2015"
     },
     {
-        provider: "Axelos",
-        title: "ITIL v2 Foundation Certificate",
-        url: "https://www.axelos.com/",
-        year: "2014"
+        Provider: "Axelos",
+        Title: "ITIL v2 Foundation Certificate",
+        Url: "https://www.axelos.com/",
+        Year: "2014"
     },
     {
-        provider: "MITx",
-        title: "Introduction to Computer Science and Programming using Python",
-        url: "https://mitxonline.mit.edu/",
-        year: "2014"
+        Provider: "MITx",
+        Title: "Introduction to Computer Science and Programming using Python",
+        Url: "https://mitxonline.mit.edu/",
+        Year: "2014"
     },
     {
-        provider: "University of Lincoln",
-        title: "Batchelor of Arts (Hons) Media Production 2:1",
-        url: "https://www.lincoln.ac.uk/",
-        year: "2005"
+        Provider: "University of Lincoln",
+        Title: "Batchelor of Arts (Hons) Media Production 2:1",
+        Url: "https://www.lincoln.ac.uk/",
+        Year: "2005"
     }
 ]
 

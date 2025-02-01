@@ -1,0 +1,13 @@
+<section class="sw__page-content row mb-5">
+  <article class="col-12">
+      <h2 class="text-uppercase sw__page-text sw__page-text--thin mb-5">Career Summary</h2>
+
+      <section class="main-timeline">
+          <span *ngFor="let c of Career">
+              <span class="ms-3 timeline">
+                  <sw-company [company]="c"></sw-company>
+              </span>
+          </span>
+      </section>
+  </article>
+</section>

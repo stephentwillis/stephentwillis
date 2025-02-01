@@ -15,7 +15,8 @@ export class RolesComponent {
     }
 
     private getData = (): void => {
-        this.service.getData()
-            .subscribe((data: Array<ICompany>) => this.career = [ ...data ]);
+        this.service
+          .getData()
+          .subscribe((data: Array<ICompany>) => this.career = [ ...data ]);
     }
 }

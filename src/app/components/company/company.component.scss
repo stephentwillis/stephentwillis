@@ -1,0 +1,39 @@
+@import '../../../sass/variables';
+
+.sw-role__role-card {
+    background-color: #eee;
+    padding: 2rem;
+    /*border-left: 5px solid $olive-light;*/
+
+    .sw-role__role-header {
+        font-weight: bold;
+        font-style: italic;
+
+        .sw-role__company-logo {
+            width: 100%;
+        }
+
+        .sw-role__details-header {
+            font-size: 99%;
+        }
+    }
+
+    .sw-role__role-header,
+    .sw-role__role-overview,
+    .sw-role__role-body {
+        a {
+            color: $olive-dark;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $olive-light;
+        }
+
+        svg {
+            margin-left: 5px;
+            color: $olive-dark;
+            font-size: 0.9rem;
+        }
+    }
+}

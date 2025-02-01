@@ -1,0 +1,28 @@
+<div class="sw-role__role-card mb-5 ms-5">
+  <section class="row mb-3 sw-role__role-header">
+      <article *ngIf="Company.Logo" class="col-3 col-md-1">
+          <img [src]="Company.Logo" alt="company logo" class="sw-role__company-logo" />
+      </article>
+
+      <article class="sw-role__details-header col-9 col-md-11">
+          <h4 class="text-uppercase sw__page-text sw__page-text--thin">
+            {{Company.Name}}
+          </h4>
+
+          <span *ngFor="let r of Company.Roles">
+            <h5 class="sw__page-text sw__page-text--thin row">
+              <strong class="col-12 col-md-9">{{r.JobTitle}}</strong>
+              <span class="col-12 col-md-3">{{r.From}} - {{r.To}}</span>
+            </h5>
+          </span>
+
+          <div *ngIf="Company.Url.length > 0">
+              <a href={{Company.Url}} target="_blank">{{Company.Url | url}}</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+      </article>
+  </section>
+
+  <section class="row sw-role__role-overview mb-3" [innerHTML]="overview"></section>
+
+  <section class="row sw-role__role-body" [innerHTML]="description"></section>
+</div>

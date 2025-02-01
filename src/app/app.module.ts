@@ -17,6 +17,8 @@ import { RolesComponent } from './components/roles/roles.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ImagePlaceholderComponent } from './components/image-placeholder/image-placeholder.component';
 import { RoleComponent } from './components/role/role.component';
+import { CompanyComponent } from './components/company/company.component';
+import { CareerComponent } from './components/career/career.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { RoleComponent } from './components/role/role.component';
     ContactComponent,
     ImagePlaceholderComponent,
     RoleComponent,
-    UrlPipe
+    UrlPipe,
+    CompanyComponent,
+    CareerComponent
   ],
   imports: [
     BrowserModule,

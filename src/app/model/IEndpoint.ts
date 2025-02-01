@@ -1,5 +1,5 @@
 export interface IEndpoint {
-    name: string;
-    secret: string;
-    url: string;
+    Name: string;
+    Secret: string;
+    Url: string;
 }
