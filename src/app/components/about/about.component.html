@@ -3,8 +3,8 @@
         <h2 class="text-uppercase sw__page-text sw__page-text--thin mb-5">Education, Qualifications, and Training</h2>
 
         <section class="main-timeline">
-            <span class="timeline ms-3" *ngFor="let e of collection">
-                <aside class="sw__utility--copy-block ms-5">
+            <span class="timeline ms-0 ms-md-3" *ngFor="let e of collection">
+                <aside class="sw__utility--copy-block mb-3 mb-md-0 ms-0 ms-md-5">
                     <p>
                         {{e.Title}} ({{e.Year}}), <a [href]="e.Url" target="_blank">{{e.Provider}}<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </p>
